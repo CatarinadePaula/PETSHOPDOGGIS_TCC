@@ -1,0 +1,21 @@
+// Declaração das variaveis
+$primary: #f7b05b;
+$body-bg: #1f1300;
+$success: #F8A828;
+
+
+.modal-content{
+    padding: 10px 10px 30px;
+    box-shadow: 0px 0px 3px #000000;
+}
+
+.form-group input{
+    font-size: 18px;
+    border: 0 px;
+    box-shadow: 0px 0px 3px #000000;
+    
+}
+
+//Importação do Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+

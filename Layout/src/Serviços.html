@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+<!-- Icones -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<!-- Cabeçalho -->
+    <title> PETSHOP DOGGIS </title>
+  </head>
+  <body>
+
+<!-- Inicio do container -->
+    <div class="container">
+        <div class="row mt-1 justify-content-center">
+            <div class="col-sm-4 logo-main">
+                <a class="navbar-brand" href="index.html"><img src="img/1.png" class="img-fluid"> </a> 
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary border border-dark rounded">
+
+<!-- Ajusta ao tamanho da tela --> 
+           <button class="navbar-toggler" type="button" data-toogle="collapse" data-target="#navbarSite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+<!-- barra de menu -->
+            <div class="collapse navbar-collapse" id="navbarSite"> 
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="Serviços.html"> Serviços </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="Produtos.html"> Produtos </a>
+                </li>
+                    <li class="nav-item">
+                            <a class="nav-link mb-0 h5" href="Clientes.html"> Clientes </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link mb-0 h5" href="Pets.html"> Pets </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="Veterinario.html"> Veterinarios </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="#"> Agendamento </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="#"> Pagamento </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="#"> Promoções </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link mb-0 h5" href="#"> Relatórios </a>
+                     </li>
+                        
+                    </div>
+                    
+                    </li>
+ 
+                </ul>
+                    <form class="form-inline">
+                        <button type="submit" class="btn btn-light" onclick="pop_up()"><i class="fas fa-user-circle"></i></button>
+                        <button type="submit" class="btn btn-light" onclick="Nova()"><i class="fas fa-sign-out-alt"></i></button>
+
+                        <script type="text/javascript">
+                            function Nova()
+                            {
+                            location.href="Login.html"
+                            }
+                            </script>
+                        <script>
+                            function pop_up(){
+                                
+                            }
+
+                        </script>
+
+                    </form>
+
+            </div>
+
+        </nav>
+
+
+                <div class="w-75 mx-auto ml-auto bg-light">  
+<div class="row mx-md-n4">
+    <div class="col py-3 px-md-3 border bg-light border-dark rounded">
+        
+        <form class="form-inline" name= "f_tool" method="POST" action="Servicos.php">
+            <button type="submit" class="btn btn-light" onclick="NewEntry()"><i class="fas fa-file"></i> Novo</button>
+            <button type="submit" class="btn btn-light" onclick="Edit()"><i class="fas fa-edit"></i> Editar</button>
+            <button type="submit" class="btn btn-light"><i class="fas fa-save"></i> Salvar</button>
+            <button type="submit" class="btn btn-light" onclick="Delete()"><i class="fas fa-trash-alt"></i> Excluir</button>
+
+    </div>
+</div>
+<div class="row mx-md-n4 rounded">
+    <div class="col py-3 px-md-3 border-0 bg-light rounded">
+
+        <div class="form-group">
+        <p><b id="CodigoServiço-name">Código do Serviço</b></p>
+        <input type="text" name=COD_SERVICO class="form-control">
+    </div>
+        <div class="form-group">
+            <p><b id="NomeServiço-name">Nome do Serviço</b></p>
+            <input type="text" name=NOME_SERVICO class="form-control">
+        </div>
+
+    </div>
+
+    <div class="col py-3 px-md-3 border-0 bg-light rounded">
+        <form class="col-12">
+            <div class="form-group">
+                <p><b id="TempoEstimado-name">Tempo Estimado</b></p>
+                <input type="text" name=TEMPO_SERVICO class="form-control">
+        </div>
+            <div class="form-group">
+                <p><b id="Responsavel-name">Responsável</b></p>
+                <input type="text" name=RESP_SERVICO class="form-control">
+            </div>
+            <div class="form-group">
+                <p><b id="PontosPataz-name">Pontos Pataz</b></p>
+                <input type="text" name=PATAZ_SERVICO class="form-control">
+            </div>
+    
+        </div>
+
+    <div class="col py-3 px-md-3 border-0 bg-light rounded">
+            <div class="form-group">
+                <p><b id="PrecoServico-name">Preço</b></p>
+                <input type="text" name=PRECO_SERVICO class="form-control">
+        </div>
+            <div class="form-group">
+                <p><b id="ProdutosUsados-name">Produtos Usados</b></p>
+                <input type="text" name=PROD_SERVICO class="form-control">
+            </div>   
+
+            </div>
+
+    <div class="col py-3 px-md-3 border border-dark bg-light rounded-right border-left">
+
+            <div class="form-group">
+                <p><b id="HistoricoPreco-name">Histórico de Preços</b></p>
+            <input type="text" class="form-control">
+        </div>
+            <div class="form-group">
+                <p><b id="HistoricoCompra-name">Histórico de Compras</b></p>
+                <input type="text" class="form-control">
+            </div>
+                </div>
+
+
+            </form>
+</div>
+
+</div>
+
+        </div> <!-- fim do container -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
